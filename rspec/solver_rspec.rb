@@ -1,4 +1,4 @@
-require_relative '../solver'
+require './solver'
 
 describe Solver do
   describe '#factorial' do
