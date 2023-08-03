@@ -7,7 +7,7 @@ describe Solver do
     end
 
     it 'should raise an error for negative numbers' do
-      expect Solver.new.factorial(-1).to raise_error(RunTimeError)
+      expect { Solver.new.factorial(-1) }.to raise_error(RuntimeError)
     end
 
     it 'should return 6 for 3' do

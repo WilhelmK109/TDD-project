@@ -1,8 +1,9 @@
 class Solver
   def factorial(integer)
-    raise RunTimeError, 'Negative numbers are not allowed!' if integer.negative?
+    raise 'Number must be positive' if integer.negative?
+    return 1 if [0, 1].include?(integer)
 
-    (1..integer).inject(:*) || 1
+    factorial(integer - 1) * integer
   end
 
   def reverse(word)
